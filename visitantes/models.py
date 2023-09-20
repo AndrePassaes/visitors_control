@@ -38,7 +38,7 @@ class Visitor(models.Model):
         auto_now_add=True
     )
 
-    left_time = models.DateTimeField(
+    leave_time = models.DateTimeField(
         verbose_name="Horário de saída da portaria",
         auto_now=False,
         blank=True,

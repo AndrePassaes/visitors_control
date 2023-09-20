@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def visitor_registration(request):
+    context = {}
+
+    return render(request, 'visitor_registration.html', context)
