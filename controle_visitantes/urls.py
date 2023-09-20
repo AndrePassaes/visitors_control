@@ -14,7 +14,7 @@ urlpatterns = [
     ),
 
     path(
-        "visitor-registration/",
+        "visitor_registration/",
         visitor_registration,
         name="visitor_registration"
     )
