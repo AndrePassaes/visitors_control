@@ -4,4 +4,7 @@ from visitantes.models import Visitor
 class VisitorForm(forms.ModelForm):    
     class Meta:
         model = Visitor
-        fields = "__all__"
+        fields = {
+            "full_name", "cpf", "birth_date",
+            "house_number", "license_plate", 
+        }
