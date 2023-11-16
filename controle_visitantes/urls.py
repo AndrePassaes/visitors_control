@@ -17,5 +17,12 @@ urlpatterns = [
         "visitor_registration/",
         visitor_registration,
         name="visitor_registration"
+    ),
+    
+    path(
+        "visitors/<int:id>/",
+        visitor_information,
+        name="visitor_information"
     )
+    
 ]
