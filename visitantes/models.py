@@ -22,7 +22,7 @@ class Visitor(models.Model):
         null=False
     )
 
-    house_number = models.PositiveBigIntegerField(
+    house_number = models.PositiveSmallIntegerField(
         verbose_name="Número da casa a ser visitada",
     )
 
@@ -69,5 +69,5 @@ class Visitor(models.Model):
         verbose_name_plural = "Visitors"
         db_table = "visitor"
 
-        def __str__(self):
-            return self.full_name
+    def __str__(self):
+        return self.full_name
