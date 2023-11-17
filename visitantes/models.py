@@ -2,6 +2,21 @@ from django.db import models
 
 
 class Visitor(models.Model):
+    
+    VISITOR_STATUS = [
+        ("AGUARDANDO", "Aguardando autorização"),
+        ("EM_VISITA", "Em visita"),
+        ("FINALIZADO", "Visita Finalizada"),
+    ]
+    
+    status = models.CharField(
+        verbose_name="Status",
+        max_length=10,
+        choices=VISITOR_STATUS,
+        default="AGUARDANDO"
+        
+    )
+    
     full_name = models.CharField(
         verbose_name="Nome completo",
         max_length=100,
