@@ -3,6 +3,7 @@ from django.urls import path
 
 from usuarios.views import index
 from visitantes.views import visitor_registration
+from visitantes.views import visitor_information
 
 urlpatterns = [
     path("admin/", admin.site.urls),
