@@ -63,6 +63,30 @@ class Visitor(models.Model):
         verbose_name="Responsável pelo registro",
         on_delete=models.PROTECT
     )
+    
+    def get_leave_time(self):
+        if self.leave_time:
+            return self.leave_time
+        
+        return "Horário de saída não registrado"
+    
+    def get_authorization_time(self):
+        if self.authorization_time:
+            return self.authorization_time
+        
+        return "Visitante aguardando autorização!"
+    
+    def get_responsible_resident(self):
+        if self.responsible_resident:
+            return self.responsible_resident
+        
+        return "Visitante aguardando autorização!"
+    
+    def get_license_plate(self):
+        if self.license_plate:
+            return self.license_plate
+        
+        return "Veículo não registrado"
 
     class Meta:
         verbose_name = "Visitor"
